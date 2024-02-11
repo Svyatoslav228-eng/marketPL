@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./js/reg.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Registr</title>
+    <style>
+      .to_enter {
+        cursor: grab;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="message" class="text-center">
+        <a class="to_reg" onclick="enter()">Вход</a>/реситрация
+      </h1>
+      <form
+        class="text-center"
+        onsubmit="(e)=>{e.preventDefault(); sendData()}"
+      >
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="login"
+            placeholder="Придумайте Логин"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="Придумайте Имя"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Придумайте Пароль"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            id="conf_password"
+            placeholder="Повторите Пароль"
+          />
+        </div>
+        <button type="button" class="btn btn-primary" onclick="sendData()">
+          Вход
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

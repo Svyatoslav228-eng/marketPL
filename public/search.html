@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./js/search.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Searching</title>
+
+    </head>
+    <body>
+        <a href="/"><button type="button" class="btn btn-primary" >
+            Вернуться
+          </button></a>
+          <div class="container">
+            <h1 id="message" class="text-center"></h1>
+            <form
+              class="text-center"
+              onsubmit="(e)=>{e.preventDefault(); GetData()}"
+            >
+            <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="search"
+                  placeholder="Поиск - немного сломан, пользуйтесь url строкой!"
+                />
+            </div>
+            <a href="/search?name=honor"><button type="button" class="btn btn-primary" onclick="GetData()">
+                  Поиск
+            </button></a>
+           
+            </form>
+
+          </div>
+    </body>
+</html>

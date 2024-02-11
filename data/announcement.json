@@ -1,0 +1,68 @@
+
+{
+    "HONOR 90 8GB/256GB международная версия":{
+        "someSpec": "Android, экран 6.7 AMOLED (1200x2664) 120 Гц, Qualcomm Snapdragon 7 Gen 1 Accelerated Edition, ОЗУ 8 ГБ, память 256 ГБ, камера 200 Мп, аккумулятор 5000 мАч, 2 SIM (nano-SIM/eSIM)",
+        "img": "header/f5215ab67a2f4f60d1d4ec2b62c27262.jpeg",
+        "price": 1000,
+        "username": "alngrakjsn",
+        "telNum": "+375299634861"
+    },
+    "HONOR 60 8GB/256GB международная версия":{
+        "someSpec": "Android, экран 6.7 AMOLED (1200x2664) 120 Гц, Qualcomm Snapdragon 7 Gen 1 Accelerated Edition, ОЗУ 8 ГБ, память 256 ГБ, камера 200 Мп, аккумулятор 5000 мАч, 2 SIM (nano-SIM/eSIM)",
+        "img": "header/f5215ab67a2f4f60d1d4ec2b62c27262.jpeg",
+        "price": 1000,
+        "username": "lermltkm",
+        "telNum": "+375297532149"
+    },
+    "Infinix Note 30 8GB/128GB": {
+        "price": "2935.38",
+        "someSpec": "\n                Android, экран 6.78\" IPS (1080x2460) 120 Гц, Mediatek Helio G99, ОЗУ 8 ГБ, память 128 ГБ, поддержка карт памяти, камера 64 Мп, аккумулятор 5000 мАч, 2 SIM (nano-SIM), влагозащита IP53\n            ",
+        "img": "header/98cd0414f8f1aa91dbe0f035e3416ff2.jpeg",
+        "username": "vhjfduvbhifd",
+        "telNum": "+375297537373"
+    },
+    "Apple iPhone 12 Pro 128GB Восстановленный by Breezy, грейд B": {
+        "price": "764.99",
+        "someSpec": "\n                Apple iOS, экран 6.1\" OLED (1170x2532) 60 Гц, Apple A14 Bionic, ОЗУ 6 ГБ, память 128 ГБ, камера 12 Мп, аккумулятор 2775 мАч, 1 SIM (nano-SIM/eSIM), влагозащита IP68\n            ",
+        "img": "header/b6b2bad1601395e9ed3810b72e2bcfa6.png",
+        "username": "kjsdnajkfn",
+        "telNum": "+375291591951"
+    },
+    "Infinix Hot 30i X669D 8GB/128GB": {
+        "price": "115.84",
+        "someSpec": "\n                Android, экран 6.56\" IPS (720x1612) 90 Гц, UniSoC Tiger T606, ОЗУ 8 ГБ, память 128 ГБ, поддержка карт памяти, камера 13 Мп, аккумулятор 5000 мАч, 2 SIM (nano-SIM)\n            ",
+        "img": "header/61cf5532a4a85446a1bcae7203ab90f8.jpeg",
+        "username": "fjoaisdhnjf",
+        "telNum": "+375291417117"
+    },
+    "Apple iPhone XR 64GB Восстановленный by Breezy, грейд B": {
+        "price": "305.81",
+        "someSpec": "\n                Apple iOS, экран 6.1\" IPS (828x1792), Apple A12 Bionic, ОЗУ 3 ГБ, память 64 ГБ, камера 12 Мп, аккумулятор 2942 мАч, 1 SIM (nano-SIM/eSIM), влагозащита IP67\n            ",
+        "img": "header/dbd5dec69b90e7d754041d6c19dc79e5.png",
+        "username": "infdvgisn",
+        "telNum": "+37529933695"
+    },
+    "Apple iPhone SE 64GB Восстановленный by Breezy, грейд B": {
+        "price": "259.90",
+        "someSpec": "\n                Apple iOS, экран 4.7\" IPS (750x1334) 60 Гц, Apple A13 Bionic, ОЗУ 3 ГБ, память 64 ГБ, камера 12 Мп, аккумулятор 1820 мАч, 1 SIM (nano-SIM/eSIM), влагозащита IP67\n            ",
+        "img": "header/d288c5101a56bfe17964ea3484b3b7c5.png",
+        "username": "fiuvbnd",
+        "telNum": "+37529313213"
+    },
+    "Oppo Reno8 T CPH2481 8GB/128GB международная версия": {
+        "price": "259.62",
+        "someSpec": "\n                Android, экран 6.43\" AMOLED (1080x2400) 90 Гц, Mediatek Helio G99, ОЗУ 8 ГБ, память 128 ГБ, поддержка карт памяти, камера 100 Мп, аккумулятор 5000 мАч, 2 SIM (nano-SIM)\n            ",
+        "img": "header/2db22a8697f5d1885670cd4a578053c1.jpeg",
+        "username": "fdvikjnv",
+        "telNum": "+37529798797"
+    },
+    "Xiaomi Redmi 12 8GB/256GB без NFC международная версия": {
+        "price": "207.86",
+        "someSpec": "\n                Android, экран 6.79\" IPS (1080x2460) 90 Гц, Mediatek Helio G88, ОЗУ 8 ГБ, память 256 ГБ, поддержка карт памяти, камера 50 Мп, аккумулятор 5000 мАч, 2 SIM (nano-SIM), влагозащита IP53\n            ",
+        "img": "header/30f0ccc8a60a07c5de5b694c0ad5859c.jpeg",
+        "username": "jhbvfdsjhbjf",
+        "telNum": "+375294545454"
+    }
+    
+
+}

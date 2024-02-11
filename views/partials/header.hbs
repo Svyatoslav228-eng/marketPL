@@ -1,0 +1,46 @@
+{{log '+' this}}
+<header class="header">
+       <a href="./auth/addAnn"><button type="button" class="submitting_advert" onclick="sendData2()">
+        разместить объявление
+      </button></a>
+       <a href="./auth/profileLiked">
+      <button class="likedAdv" onclick="">
+        <img src="img/heart icon.png" alt="like" />
+      </button>
+      </a>
+      
+      <a href="./auth/profile"><button class="ent_reg2" id="prof">Профиль</button></a>
+        
+      <a href="./.enter"><button class="ent_reg" id="log-reg">Вход и регистрация</button></a>
+       <a href="./.search"><button type="button" class="ent_reg" >
+        Поиск по таварам
+      </button></a>
+        
+  </header>
+<script defer>
+  async function sendData2(){
+  const response = await fetch('/addAnn')// /auth/addAnn
+  const data = await response.json();
+  document.location.pathname = data.path;
+  }
+
+  async function loadUser() {
+  try {
+    const response = await fetch("/username");
+    const data = await response.json();
+
+    if (data.error) {
+      alert(data.error);
+      return;
+    }
+
+    document.querySelector("#prof").textContent = data.username;
+    document.querySelector("#log-reg").textContent = null;}
+    catch(error){
+      console.log('Error!')
+    }
+    
+    }
+  
+  
+</script>

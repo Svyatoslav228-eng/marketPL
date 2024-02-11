@@ -1,0 +1,115 @@
+<head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    
+    <style>
+      
+      .header {
+    
+    background-color: #403f3f;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+
+    }
+    .submitting_advert {
+        background-color: steelblue;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 20%;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .likedAdv {
+        background-color: #403f3f;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .ent_reg {
+        background-color: #403f3f;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .ent_reg2{
+        background-color: #403f3f;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .wrapper{
+    
+    
+    border: 1px black solid;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 70px;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  .div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+    </style>
+
+   
+    <title>Market Place</title>
+</head>
+
+{{>header this}}
+
+<a href="/"><button>Выход к публикациям</button></a>
+</form>
+<div class="div">
+
+
+{{#if ANNVisible}}
+<div class="wrapper" >
+    {{#if img}}
+        <a href="/info?name={{annName}}" ><img src="https://{{img}}" alt="{{annName}}" ></a>
+    {{/if}}
+    <a href="/liking?name={{annName}}"><button type="button" id='like'><img src="img/heart icon.png" alt="like" /></button></a>
+    <a href="/info?name={{annName}}"><h4>{{annName}}</h4></a> 
+    <div>{{price}}</div>
+</div>
+{{/if}}
+
+</div>
+
+
+<script defer>
+   
+
+  async function sendDataButt() {
+    const button = document.querySelector("#like") 
+    let count=0;
+    const clicking = button.addEventListener('click', Click(count))
+    count = Click(count)
+    const response = await fetch("/liking",{
+        method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ count }),
+    })
+    const data = await response.json();
+    if (!response.ok) {
+        document.getElementById("message").textContent = data.message;
+        return;
+      }
+  } 
+
+  function Click(counter){
+    return counter++;
+  }
+  </script>

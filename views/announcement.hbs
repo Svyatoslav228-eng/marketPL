@@ -1,0 +1,82 @@
+
+<head>
+     <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    
+<style>
+    .header {
+   
+    background-color: #403f3f;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+
+    }
+    .submitting_advert {
+        background-color: steelblue;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        margin-right: 20%;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .likedAdv {
+        background-color: #403f3f;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .ent_reg {
+        background-color: #403f3f;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .ent_reg2{
+        background-color: #403f3f;
+        color: white;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .text-center {
+    margin: 5%;
+  }
+
+    .wrappers{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 70px;
+        font-family: "Lucida Console", Monaco, monospace;
+    }
+    </style>
+    <title>Market Place</title>
+</head>
+
+{{>header this}}
+
+
+<a href="/"><button>Выход к публикациям</button></a>
+
+{{#if ANNVisible}}
+<section class="wrappers">
+    <h2>{{annName}}</h2>
+    {{#if imgFound}}
+    <img src="https://content2.onliner.by/catalog/device/{{imgLink}}" alt="{{annName}}">
+    {{/if}}
+    <div>Описание:{{someSpec}}</div>
+    <div>Продавец:{{username}}</div>
+    <div>Номер телефона:{{telNum}}</div>
+     <div>Цена  {{price}}</div>
+</section>
+{{/if}}

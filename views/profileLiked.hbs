@@ -1,0 +1,89 @@
+<head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    
+    <style>
+      
+      
+    .wrapper{
+    border: 1px black solid;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 70px;
+    font-family: "Lucida Console", Monaco, monospace;
+  }
+  .div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .to_reg {
+        cursor: grab;
+      }
+    </style>
+
+   
+    <title>Profile</title>
+</head>
+
+<a href="/logout"><button type="button" class="btn btn-primary" >
+    LogOut
+  </button></a>  <!-- logout -->
+    <a href="/"><button type="button" class="btn btn-primary" >
+        Вернуться
+      </button></a>
+    <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="serching"
+          placeholder="Поиск"
+        />
+        <button type="button" class="btn btn-primary" onclick='sendData()'>
+          Поиск
+    </button>
+</div>
+
+<h1 id="message" class="text-center">
+         <a class="to_reg" href="/profile">Мои Объявления</a> ||<img src="img/heart icon.png" alt="like" />Избраное
+</h1>
+
+<div class="div">
+{{~#each announcement}}
+{{~#with .}}
+<div class="wrapper" >
+    {{#if img}}
+        <a href="/info?name={{annName}}" ><img src="{{img}}" alt="{{annName}}" ></a>
+    {{/if}}
+    <a href="/info?name={{annName}}"><h4>{{annName}}</h4></a> 
+    <br><b>{{price}}</b>
+</div>
+{{/with}}
+{{/each}}
+</div>
+
+
+
+
+<script defer>
+   async function sendData() {
+    const name = document.getElementById("serching").value;
+    const response = await fetch("/search",{
+        method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name }),
+    })
+    const data = await response.json();
+    if (!response.ok) {
+        document.getElementById("message").textContent = data.message;
+        return;
+      }
+  } 
+
+
+
+  </script>

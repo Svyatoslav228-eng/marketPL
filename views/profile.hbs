@@ -1,0 +1,90 @@
+<head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    
+    <style>
+      
+      
+    .wrapper{
+    align-items: center;
+    justify-content: center;
+    border: 1px black solid;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 70px;
+    font-family: "Lucida Console", Monaco, monospace;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 3%;
+  }
+  .to_reg {
+        cursor: grab;
+      }
+    </style>
+
+   
+    <title>Profile</title>
+</head>
+
+<a href="/auth/logout"><button type="button" class="btn btn-primary" >
+    LogOut
+  </button></a> 
+    <a href="/"><button type="button" class="btn btn-primary" >
+        Вернуться
+      </button></a>
+    <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          id="serching"
+          placeholder="Поиск"
+        />
+        <button type="button" class="btn btn-primary" onclick='sendData()'>
+          Поиск
+    </button>
+</div>
+
+<h1 id="message" class="text-center">
+        Мои Объявления || <a class="to_reg" onclick="">Избраное</a>
+</h1>
+
+<div class="div">
+{{~#each announce}}
+
+<div class="wrapper" >
+    {{#if img}}
+        <a href="/auth/infoProf" ><img src="{{img}}" alt="{{annName}}" ></a>
+    {{/if}}
+    <a href="/auth/infoProf"><h4>{{annName}}</h4></a> 
+    <b>{{price}}</b>
+</div>
+
+{{/each}}
+</div>
+
+
+
+
+<script defer>
+   async function sendData() {
+    const name = document.getElementById("serching").value;
+    const response = await fetch(`/search?name=${name}`,{
+        
+    })
+    const data = await response.json();
+    if (!response.ok) {
+        document.getElementById("message").textContent = data.message;
+        return;
+      }
+  } 
+
+
+
+  </script>
